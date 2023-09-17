@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="{% static 'bootstrap.min.css' %}" type="text/css" rel="stylesheet">
+</head>
+<body style="background-image: url("")>
+ <div class="container bg-light">
+     <img src="">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 bg-dark">
+            <h1 class="text-light">Enter details</h1>
+
+            <form action="/result/"  method="post">
+                {% csrf_token %}
+                <input type="number" name="prgnancies" id="prgnancies" placeholder="Enter prgnancies" class="form-group form-control">
+                <input type="number" name="glucose" id="glucose" placeholder="Enter Glucose value" class="form-group form-control">
+                <input type="number" name="bp" id="bp" placeholder="Enter Blood Pressure" class="form-group form-control">
+                <input type="number" name="skin" id="skin" placeholder="Enter Skin Thickness" class="form-group form-control">
+                <input type="number" name="insulin" id="insulin" placeholder="Enter Insulin" class="form-group form-control">
+                <input type="number" name="dpd" id="dpd" placeholder="Enter Diabetes Pedigree Function" class="form-group form-control">
+                <input type="number" name="bmi" id="bmi" placeholder="Enter BMI" class="form-group form-control">
+                <input type="number" name="age" id="age" placeholder="Enter Age" class="form-group form-control">
+                <button class="btn btn-outline-danger">Get Results</button>
+            </form>
+        </div>
+        <div class="col-2"></div>
+    </div>
+    </div>
+</body>
+</html>

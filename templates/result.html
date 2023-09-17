@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+     <link href="{% static 'bootstrap.min.css' %}" type="text/css" rel="stylesheet">
+</head>
+<body style="background-color: #86cfda">
+ <div class="container">
+     <div class="card" style="height: 100px;width: 100%;background-color:black;margin-top: 200px">
+     {%if result == 'You have diabetes' %}
+         <h1 class="text-danger" style="text-align: center">{{ result }}</h1>
+     {% endif %}
+
+     {%if result == "You are normal" %}
+         <h1 class="text-success" style="text-align: center">{{ result }}</h1>
+     {% endif %}
+     </div>
+ </div>
+</body>
+</html>
